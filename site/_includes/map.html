@@ -1,0 +1,75 @@
+<div id="map" style="height: 1000px;"></div>
+
+<script>
+    var coordinates = {{ site.data.bus_objects | jsonify }};
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 18,
+    }).addTo(map);
+
+    map.locate({setView: true, maxZoom: 16});
+
+    function onLocationFound(e) {
+        var radius = e.accuracy / 2;
+        L.circle(e.latlng, radius).addTo(map);
+    }
+
+    map.on('locationfound', onLocationFound);
+
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    map.on('locationerror', onLocationError);
+
+    
+    
+
+    // Add markers for each item in coordinates
+    var services = []; // Initialize an array to store string values for all operators
+
+    for (var key in coordinates) {
+        for (var i = 0; i < coordinates[key].length; i++) {
+            var date = new Date(coordinates[key][i]['recordedAtTime']);
+            const POPUP_STRING = `
+                Operator: ${coordinates[key][i]['operatorRef']}
+                <br>
+                Service: ${coordinates[key][i]['lineRef']}
+                <br>
+                Vehicle: ${coordinates[key][i]['vehicleRef']}
+                <br>
+                Origin: ${coordinates[key][i]['originName'].replaceAll('_', ' ')}
+                <br>
+                Destination: ${coordinates[key][i]['destinationName'].replaceAll('_', ' ')}
+                <br>
+                Recorded at: ${date.toLocaleTimeString()}
+                
+            `;
+
+            var marker = L.marker(
+                [coordinates[key][i]['vehicleLocation'].latitude, coordinates[key][i]['vehicleLocation'].longitude],
+                {
+                    tags: [coordinates[key][i]['lineRef']]
+                })
+                .bindPopup(POPUP_STRING)
+                .on('click', function(e) {
+                    e.target.openPopup();
+                })
+                .addTo(map);
+
+            if (!services.includes(coordinates[key][i]['lineRef'])) {
+                services.push(coordinates[key][i]['lineRef']); // Add operator to the array
+            }
+        }
+    }
+    
+    services.sort();
+    
+    L.control.tagFilterButton({
+        data: services,
+        icon: '<img src="filter.png">',
+        filterOnEveryClick: true
+    }).addTo( map );
+    </script>

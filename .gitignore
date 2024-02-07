@@ -1,0 +1,4 @@
+*.yaml
+*.xml
+.DS_Store
+.env

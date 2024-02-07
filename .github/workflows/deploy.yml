@@ -1,0 +1,48 @@
+name: Deploy
+
+on:
+    push:
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set up Ruby
+              uses: actions/setup-ruby@v1
+              with:
+                    ruby-version: 2.7
+
+            - name: Install Pip packages
+              run: |
+                    python3 -m pip install --upgrade pip
+                    pip install -r requirements.txt
+
+            - name: Environment variables
+              run: |
+                    echo "GOV_API_KEY=${{ secrets.GOV_API_KEY }}" >> .env
+            
+            - name: Run Python script
+              run: python3 gov.py
+
+            - name: Install dependencies
+              run: |
+                cd site
+                gem install bundler
+                bundle install
+
+            - name: Build
+              run: |
+                    bundle exec jekyll build
+            
+            - name: Deploy GitHub Pages site
+              uses: actions/deploy-pages@v4.0.4
+              with:
+                # GitHub token
+                token: # default is ${{ github.token }}
