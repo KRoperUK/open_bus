@@ -28,4 +28,6 @@ jobs:
                 port: 22
                 command_timeout: 30m
                 script: | 
+                    git restore /etc/open_bus/
                     cd /etc/open_bus/ && git pull origin main && echo `date` > last_deploy.txt
+                    GIT_SHA=`git rev-parse HEAD` && sed -i "s/COMMIT_SHA/$GIT_SHA/" /etc/open_bus/site/_layouts/home.html
