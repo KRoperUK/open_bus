@@ -2,14 +2,14 @@
 
 <script>
     var coordinates = {{ site.data.bus_objects | jsonify }};
-    var map = L.map('map').setView([52.45033122641582, -1.930996616069787], 13);
+    var map = L.map('map').setView([52.45033122641582, -1.930996616069787], 14);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
         maxZoom: 18,
     }).addTo(map);
 
-    map.locate({setView: true, maxZoom: 16});
+    map.locate({setView: true, maxZoom: 14});
 
     function onLocationFound(e) {
         var radius = e.accuracy / 2;
