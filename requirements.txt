@@ -1,2 +1,4 @@
 siri
 python-dotenv
+pyyaml
+requests

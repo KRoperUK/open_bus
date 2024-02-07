@@ -8,9 +8,9 @@ on:
     workflow_dispatch:
     
     # Schedule a workflow to run every 15 minutes from 5am to 11pm, and then every hour thereafter
-    schedule:
-        - cron: '*/5 5-22 * * *'
-        - cron: '5 23,0-4 * * *'
+    # schedule:
+    #     - cron: '*/5 5-22 * * *'
+    #     - cron: '5 23,0-4 * * *'
 
 jobs:
     build:
