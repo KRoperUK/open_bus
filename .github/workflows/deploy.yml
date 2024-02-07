@@ -19,10 +19,16 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Deploy
-              run: |
-                echo ${{secrets.SSH_KEY}} > key.pem
-                ssh -o "StrictHostKeyChecking no" -i key.pem ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "cd /etc/open_bus/ && git pull origin main && echo `date` > last_deploy.txt"
+            - name: print out example job
+              uses: appleboy/ssh-action@v0.1.10
+              with:
+                host: ${{ secrets.SSH_HOS }}
+                username: ${{ secrets.SSH_USER }}
+                key: ${{ secrets.SSH_KEY }}
+                port: 22
+                command_timeout: 30m
+                script: | 
+                    cd /etc/open_bus/ && git pull origin main && echo `date` > last_deploy.txt
     # Deploy job
     deploy:
         # Add a dependency to the build job
