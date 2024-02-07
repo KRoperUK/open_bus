@@ -24,7 +24,11 @@ jobs:
                     echo "GOV_API_KEY=${{ secrets.GOV_API_KEY }}" >> .env
             
             - name: Run Python script
-              run: python3 gov.py
+              run: |
+                    ls
+                    ls /site/
+                    touch ./site/_data/bus_objects.yaml
+                    python3 gov.py
 
             - name: Move to site
               run: cd site
