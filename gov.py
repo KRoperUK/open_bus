@@ -138,7 +138,7 @@ def mapOutput(activities):
     yaml_data = {
         "bus_objects": bus_objects
     }
-    with open('./site/_data/bus_objects.yaml', 'w') as f:
+    with open('site/_data/bus_objects.yaml', 'w') as f:
         yaml.dump(yaml_data, f)
 
 
