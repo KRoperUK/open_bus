@@ -45,12 +45,18 @@
                 Destination: ${coordinates[key][i]['destinationName'].replaceAll('_', ' ')}
                 <br>
                 Recorded at: ${date.toLocaleTimeString()}
-                
             `;
+
+            // Create a custom div icon with the service number
+            var customIcon = L.divIcon({
+                className: 'custom-icon',
+                html: `<div class="service-number" style="background-color: ${coordinates[key][i]['directionRef'] === 'INBOUND' ? '#2ecc71' : '#f1c40f'}; border: 2px solid black; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center;"><b>${coordinates[key][i]['directionRef'] === 'OUTBOUND' ? '<' : ''}${coordinates[key][i]['lineRef']}${coordinates[key][i]['directionRef'] === 'INBOUND' ? '>' : ''}</b></div>`
+            });
 
             var marker = L.marker(
                 [coordinates[key][i]['vehicleLocation'].latitude, coordinates[key][i]['vehicleLocation'].longitude],
                 {
+                    icon: customIcon,
                     tags: [coordinates[key][i]['lineRef']]
                 })
                 .bindPopup(POPUP_STRING)
@@ -69,7 +75,7 @@
     
     L.control.tagFilterButton({
         data: services,
-        icon: '<img src="filter.png">',
+        icon: '<i class="fa fa-bus"></i>',
         filterOnEveryClick: true
     }).addTo( map );
     </script>
