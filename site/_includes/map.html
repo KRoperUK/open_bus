@@ -32,7 +32,15 @@
 
     for (var key in coordinates) {
         for (var i = 0; i < coordinates[key].length; i++) {
-            var date = new Date(coordinates[key][i]['recordedAtTime']);
+            var date_bus = new Date(coordinates[key][i]['recordedAtTime']);
+            var date_now = new Date();
+
+            const TIME_DIFF = date_now - date_bus
+
+            if (TIME_DIFF > 5*60*1000) {
+                continue;
+            }
+
             const POPUP_STRING = `
                 Operator: ${coordinates[key][i]['operatorRef']}
                 <br>
@@ -44,13 +52,17 @@
                 <br>
                 Destination: ${coordinates[key][i]['destinationName'].replaceAll('_', ' ')}
                 <br>
-                Recorded at: ${date.toLocaleTimeString()}
+                Recorded at: ${date_bus.toLocaleTimeString()}
             `;
 
             // Create a custom div icon with the service number
             var customIcon = L.divIcon({
                 className: 'custom-icon',
-                html: `<div class="service-number" style="background-color: ${coordinates[key][i]['directionRef'] === 'INBOUND' ? '#2ecc71' : '#f1c40f'}; border: 2px solid black; border-radius: 50%; width: 30px; height: 30px; display: flex; justify-content: center; align-items: center;"><b>${coordinates[key][i]['directionRef'] === 'OUTBOUND' ? '<' : ''}${coordinates[key][i]['lineRef']}${coordinates[key][i]['directionRef'] === 'INBOUND' ? '>' : ''}</b></div>`
+                html: `<div class="bus-icon" style="background-color: ${coordinates[key][i]['directionRef'] === 'INBOUND' ? '#2ecc71' : '#f1c40f'}; ${coordinates[key][i]['directionRef'] === 'OUTBOUND' ? 'border-style: dotted;' : '' } ${TIME_DIFF > 1*60*1000 ? 'text-decoration: underline;' : ''} ${TIME_DIFF > 3*60*1000 ? 'opacity: 0.3;' : ''}">
+                        <b>
+                            ${coordinates[key][i]['publishedLineName']}
+                        </b>
+                    </div>`
             });
 
             var marker = L.marker(
