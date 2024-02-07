@@ -18,13 +18,12 @@ jobs:
               run: |
                     python3 -m pip install --upgrade pip
                     pip install -r requirements.txt
-
-            - name: Environment variables
-              run: |
-                    echo "GOV_API_KEY=${{ secrets.GOV_API_KEY }}" >> .env
             
             - name: Run Python script
-              run: python3 gov.py
+              run: |
+                    echo "GOV_API_KEY=${{ secrets.GOV_API_KEY }}" >> .env
+                    python3 gov.py
+                    rm .env
 
             - name: Move to site
               run: cd site
@@ -41,7 +40,10 @@ jobs:
 
             - name: Build with Jekyll
               # Outputs to the './_site' directory by default
-              run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+              run: |
+                cd site
+                bundle install
+                bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
               env:
                 JEKYLL_ENV: production
 
