@@ -147,14 +147,14 @@ load_dotenv()
 activities = []
 
 # FIRST BUS
-# loadRSS(7889)
-# refactorXML('data.xml')
-# activities += getActivities('data.xml')
+loadRSS(7889)
+refactorXML('data.xml')
+activities += getActivities('data.xml')
 
 # # BANGA
-# loadRSS(2519)
-# refactorXML('data.xml')
-# activities += getActivities('data.xml')
+loadRSS(2519)
+refactorXML('data.xml')
+activities += getActivities('data.xml')
 
 # # NXWM
 loadRSS(10609)
