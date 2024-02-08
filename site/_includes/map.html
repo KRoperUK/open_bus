@@ -42,7 +42,7 @@
                 mins_remaining = Math.floor((arrival_time - date_now) / 1000 / 60);
                 arrivals_shim.push(
                     {
-                        'DestinationName': metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', ''),
+                        'DestinationName': `<b>${metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', '')}</b>`,
                         'MinsRemaining': mins_remaining
                     }
                 );
@@ -52,7 +52,25 @@
         arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
 
         for (var i = 0; i < arrivals_shim.length; i++) {
-            arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - ${arrivals_shim[i]['MinsRemaining']} mins</li>`);
+            if (arrivals_shim[i]['MinsRemaining'] > 10) {
+                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="far">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            }
+            else if (arrivals_shim[i]['MinsRemaining'] > 5) {
+                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="normal">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            }
+            else if (arrivals_shim[i]['MinsRemaining'] > 0) {
+                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="close">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            }
+            else if (arrivals_shim[i]['MinsRemaining'] >= -1) {
+                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="due">Due</span></li>`);
+            } 
+            else if (arrivals_shim[i]['MinsRemaining'] < -1) {
+                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="departed">Departed</span></li>`);
+            }
+            
+            else {
+                continue;
+            }
         }
 
         arrivals = arrivals.slice(0, 4);
@@ -65,7 +83,7 @@
                 <br>
                 <b>Stop letter:</b> ${metro_stops[key]['StopLetter']}
                 <br>
-                <ul>
+                <ul class="metro-stop-popup-ul">
                     ${ARRIVALS_STRING}
                 </ul>
             </div>
