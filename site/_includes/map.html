@@ -65,10 +65,10 @@
         arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
 
         try {
-            const NEXT_ARRIVAL = arrivals_shim[0]['MinsRemaining'];
+            var NEXT_ARRIVAL = arrivals_shim[0]['MinsRemaining'];
         }
         catch (e) {
-            const NEXT_ARRIVAL = '-';
+            var NEXT_ARRIVAL = '-';
         }
         for (var i = 0; i < arrivals_shim.length; i++) {
             if (arrivals_shim[i]['MinsRemaining'] > 10) {
