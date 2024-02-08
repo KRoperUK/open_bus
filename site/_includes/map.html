@@ -5,14 +5,26 @@
     var metro_stops = {{ site.data.metro_stops | jsonify }};
     var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
 
-    var map = L.map('map').setView([52.45033122641582, -1.930996616069787], 14);
+    lat_lon = [52.45033122641582, -1.930996616069787];
+    url_set_lat_lon = false;
 
+    const SEARCH_PARAMS = new URLSearchParams(window.location.search);
+    
+    
+    if (SEARCH_PARAMS.has('lat') && SEARCH_PARAMS.has('lon')) {
+        lat_lon = [SEARCH_PARAMS.get('lat'), SEARCH_PARAMS.get('lon')];
+        url_set_lat_lon = true;
+    }
+    
+    var map = L.map('map').setView(lat_lon, 14);
+
+    if (!url_set_lat_lon) {
+        map.locate({setView: true, maxZoom: 14});
+    }
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
         maxZoom: 18,
     }).addTo(map);
-
-    map.locate({setView: true, maxZoom: 14});
 
     function onLocationFound(e) {
         var radius = e.accuracy / 2;
@@ -33,6 +45,7 @@
     // Add markers for each item in coordinates
     var services = []; // Initialize an array to store string values for all operators
     for (var key in metro_stops) {
+        const PLATFORM_NUM = metro_stops[key]["StopLetter"].slice(-1);
         var arrivals = [];
         var arrivals_shim = [];
 
@@ -50,6 +63,8 @@
         }
 
         arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
+
+        const NEXT_ARRIVAL = arrivals_shim[0]['MinsRemaining'];
 
         for (var i = 0; i < arrivals_shim.length; i++) {
             if (arrivals_shim[i]['MinsRemaining'] > 10) {
@@ -93,8 +108,8 @@
             [metro_stops[key]['Lat'], metro_stops[key]['Lon']],
             {
                 icon: L.divIcon({
-                    className: 'metro-stop',
-                    html: `<div>${metro_stops[key]["StopLetter"].slice(-1)}</div>`
+                    className: `metro-stop ${PLATFORM_NUM % 2 == 1 ? 'ms-left' : 'ms-right' }`,
+                    html: `<div><div class='metro-stop-inner'><span>${NEXT_ARRIVAL}</span></div></div>`
                 })
             })
             .bindPopup(POPUP_STRING)
