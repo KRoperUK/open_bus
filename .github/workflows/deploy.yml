@@ -30,3 +30,5 @@ jobs:
                 script: | 
                     cd /etc/open_bus/ && git restore /etc/open_bus/site/_layouts/home.html && git pull origin main && echo `date` > last_deploy.txt
                     GIT_SHA=`git rev-parse HEAD` && sed -i "s/COMMIT_SHA/$GIT_SHA/" /etc/open_bus/site/_layouts/home.html
+                    cd /etc/open_bus && env OB_AG="GitHub Actions" sh /etc/open_bus/run.sh
+                    cat /etc/open_bus/last_deploy.txt
