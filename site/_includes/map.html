@@ -34,15 +34,28 @@
     var services = []; // Initialize an array to store string values for all operators
     for (var key in metro_stops) {
         var arrivals = [];
-
+        var arrivals_shim = [];
 
         for (var i = 0; i < metro_arrivals.length; i++) {
             if (metro_arrivals[i]['NaptanId'] === metro_stops[key]['Id']) {
                 arrival_time = new Date(metro_arrivals[i]['ExpectedArrival']);
                 mins_remaining = Math.floor((arrival_time - date_now) / 1000 / 60);
-                arrivals.push(`<li>${metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', '')}: ${mins_remaining} mins</li>`);
+                arrivals_shim.push(
+                    {
+                        'DestinationName': metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', ''),
+                        'MinsRemaining': mins_remaining
+                    }
+                );
             }
         }
+
+        arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
+
+        for (var i = 0; i < arrivals_shim.length; i++) {
+            arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - ${arrivals_shim[i]['MinsRemaining']} mins</li>`);
+        }
+
+        arrivals = arrivals.slice(0, 4);
 
         const ARRIVALS_STRING = arrivals.join('');
 
