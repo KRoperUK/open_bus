@@ -2,6 +2,9 @@
 
 <script>
     var coordinates = {{ site.data.bus_objects | jsonify }};
+    var metro_stops = {{ site.data.metro_stops | jsonify }};
+    var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
+
     var map = L.map('map').setView([52.45033122641582, -1.930996616069787], 14);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -24,16 +27,56 @@
 
     map.on('locationerror', onLocationError);
 
-    
+    var date_now = new Date();
     
 
     // Add markers for each item in coordinates
     var services = []; // Initialize an array to store string values for all operators
+    for (var key in metro_stops) {
+        var arrivals = [];
+
+
+        for (var i = 0; i < metro_arrivals.length; i++) {
+            if (metro_arrivals[i]['NaptanId'] === metro_stops[key]['Id']) {
+                arrival_time = new Date(metro_arrivals[i]['ExpectedArrival']);
+                mins_remaining = Math.floor((arrival_time - date_now) / 1000 / 60);
+                arrivals.push(`<li>${metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', '')}: ${mins_remaining} mins</li>`);
+            }
+        }
+
+        const ARRIVALS_STRING = arrivals.join('');
+
+        const POPUP_STRING = `
+            <div class="metro-stop-popup">
+                <b>${metro_stops[key]['CommonName']}</b>
+                <br>
+                <b>Stop letter:</b> ${metro_stops[key]['StopLetter']}
+                <br>
+                <ul>
+                    ${ARRIVALS_STRING}
+                </ul>
+            </div>
+        `;
+
+        var marker = L.marker(
+            [metro_stops[key]['Lat'], metro_stops[key]['Lon']],
+            {
+                icon: L.divIcon({
+                    className: 'metro-stop',
+                    html: `<div>${metro_stops[key]["StopLetter"].slice(-1)}</div>`
+                })
+            })
+            .bindPopup(POPUP_STRING)
+            .on('click', function(e) {
+                e.target.openPopup();
+            })
+            .addTo(map);
+    }
 
     for (var key in coordinates) {
         for (var i = 0; i < coordinates[key].length; i++) {
             var date_bus = new Date(coordinates[key][i]['recordedAtTime']);
-            var date_now = new Date();
+            
 
             const TIME_DIFF = date_now - date_bus
 

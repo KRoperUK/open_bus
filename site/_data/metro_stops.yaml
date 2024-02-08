@@ -1,0 +1,1575 @@
+- CommonName: Brindleyplace (Midland Metro Stop)
+  HubNaptanCode: nwmpwpjw
+  Id: 9400ZZWMBPL2
+  Indicator: Platform 2
+  Lat: 52.47671890258789
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9122459888458252
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBPL2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBPL
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Dartmouth Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpw
+  Id: 9400ZZWMDR1
+  Indicator: Platform 1
+  Lat: 52.520484924316406
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lamberts End
+  Lon: -2.0044009685516357
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMDR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMDR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: St Paul's (Midland Metro Stop)
+  HubNaptanCode: nwmwpgat
+  Id: 9400ZZWMST1
+  Indicator: Platform 1
+  Lat: 52.487220764160156
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Jewellery Quarter
+  Lon: -1.9046560525894165
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMST1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMST
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Centenary Square (Midlands Metro Stop)
+  HubNaptanCode: nwmwtpta
+  Id: 9400ZZWMCSQ1
+  Indicator: Platform 1
+  Lat: 52.47865676879883
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9083399772644043
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCSQ1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCSQ
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Loxdale (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwd
+  Id: 9400ZZWMLO2
+  Indicator: Platform 2
+  Lat: 52.56008529663086
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bradley
+  Lon: -2.065990924835205
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMLO2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMLO
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Trinity Way (Midland Metro Stop)
+  HubNaptanCode: nwmwpgda
+  Id: 9400ZZWMTR1
+  Indicator: Platform 1
+  Lat: 52.51191711425781
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9881329536437988
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMTR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMTR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Town Hall (Midlands Metro Stop)
+  HubNaptanCode: nwmwtptd
+  Id: 9400ZZWMTOH2
+  Indicator: Platform 2
+  Lat: 52.47932815551758
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9034359455108643
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMTOH2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMTOH
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: St Paul's (Midland Metro Stop)
+  HubNaptanCode: nwmwpgaw
+  Id: 9400ZZWMST2
+  Indicator: Platform 2
+  Lat: 52.4871940612793
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Jewellery Quarter
+  Lon: -1.9047880172729492
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMST2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMST
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Town Hall (Midlands Metro Stop)
+  HubNaptanCode: nwmwtptg
+  Id: 9400ZZWMTOH1
+  Indicator: Platform 1
+  Lat: 52.47925567626953
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9033329486846924
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMTOH1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMTOH
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Lodge Road-West Bromwich Town Hall (Metro Stop)
+  HubNaptanCode: nwmwpgma
+  Id: 9400ZZWMLR2
+  Indicator: Platform 2
+  Lat: 52.518680572509766
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lamberts End
+  Lon: -1.9999949932098389
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMLR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMLR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Soho Benson Road (Midland Metro Stop)
+  HubNaptanCode: nwmwpgam
+  Id: 9400ZZWMSH1
+  Indicator: Platform 1
+  Lat: 52.497047424316406
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Winson Green
+  Lon: -1.9308969974517822
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMSH1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMSH
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Five Ways (Midland Metro Stop)
+  HubNaptanCode: nwmtapwj
+  Id: 9400ZZWMFW2
+  Indicator: Platform 2
+  Lat: 52.47470474243164
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9151500463485718
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMFW2
+  PlaceType: PLT
+  StationNaptan: ''
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Pipers Row (Midland Metro Stop)
+  HubNaptanCode: nwmwjatw
+  Id: 9400ZZWMPI1
+  Indicator: Platform 1
+  Lat: 52.5852165222168
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wolverhampton
+  Lon: -2.122807025909424
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMPI1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMXR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Priestfield (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwp
+  Id: 9400ZZWMPR2
+  Indicator: Platform 2
+  Lat: 52.57194900512695
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Priestfield
+  Lon: -2.09804105758667
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMPR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMPR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Dartmouth Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdta
+  Id: 9400ZZWMDR2
+  Indicator: Platform 2
+  Lat: 52.520477294921875
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lamberts End
+  Lon: -2.004578113555908
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMDR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMDR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Black Lake (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmg
+  Id: 9400ZZWMBL2
+  Indicator: Platform 2
+  Lat: 52.53102111816406
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Black Lake
+  Lon: -2.011228084564209
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBL2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBL
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Pipers Row (Midland Metro Stop)
+  HubNaptanCode: nwmwjawa
+  Id: 9400ZZWMPI2
+  Indicator: Platform 2
+  Lat: 52.58524703979492
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wolverhampton
+  Lon: -2.1227331161499023
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMPI2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMXR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Priestfield (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwm
+  Id: 9400ZZWMPR1
+  Indicator: Platform 1
+  Lat: 52.571929931640625
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Priestfield
+  Lon: -2.0978639125823975
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMPR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMPR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Handsworth Booth Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmp
+  Id: 9400ZZWMBO2
+  Indicator: Platform 2
+  Lat: 52.50210189819336
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Handsworth
+  Lon: -1.9523530006408691
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBO2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBO
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Winson Green Outer Circle (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdp
+  Id: 9400ZZWMWI1
+  Indicator: Platform 1
+  Lat: 52.4990119934082
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Winson Green
+  Lon: -1.9393500089645386
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWI1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWI
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Grand Central New Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwj
+  Id: 9400ZZWMNWS2
+  Indicator: Platform 2
+  Lat: 52.478702545166016
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.8992849588394165
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMNWS2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMNWS
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Kenrick Park (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtp
+  Id: 9400ZZWMKE1
+  Indicator: Platform 1
+  Lat: 52.50875473022461
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9824470281600952
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMKE1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMKE
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Bilston Central (Midland Metro Stop)
+  HubNaptanCode: nwmwpdjw
+  Id: 9400ZZWMBI1
+  Indicator: Platform 1
+  Lat: 52.5656623840332
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bilston
+  Lon: -2.074894905090332
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBI1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBI
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: West Bromwich Central (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdm
+  Id: 9400ZZWMWB2
+  Indicator: Platform 2
+  Lat: 52.51654052734375
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9947630167007446
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWB2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWB
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Bilston Central (Midland Metro Stop)
+  HubNaptanCode: nwmwpdma
+  Id: 9400ZZWMBI2
+  Indicator: Platform 2
+  Lat: 52.56532287597656
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bilston
+  Lon: -2.0745999813079834
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBI2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBI
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: The Crescent (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpt
+  Id: 9400ZZWMCR2
+  Indicator: Platform 2
+  Lat: 52.567962646484375
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bilston
+  Lon: -2.0809481143951416
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Wednesbury Parkway (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdw
+  Id: 9400ZZWMWP1
+  Indicator: Platform 1
+  Lat: 52.54974365234375
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wednesbury
+  Lon: -2.0319089889526367
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWP1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWP
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: The Royal (Midland Metro Stop)
+  HubNaptanCode: nwmwpgad
+  Id: 9400ZZWMRO2
+  Indicator: Platform 2
+  Lat: 52.58113479614258
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wolverhampton
+  Lon: -2.117232084274292
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMRO2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMRO
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Dudley Street Guns Village (Midland Metro Stop)
+  HubNaptanCode: nwmwpgag
+  Id: 9400ZZWMSG1
+  Indicator: Platform 1
+  Lat: 52.5251350402832
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Guns Village
+  Lon: -2.0084550380706787
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMSG1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMSG
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Dudley Street Guns Village (Midland Metro Stop)
+  HubNaptanCode: nwmwpgaj
+  Id: 9400ZZWMSG2
+  Indicator: Platform 2
+  Lat: 52.52519607543945
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Guns Village
+  Lon: -2.0086169242858887
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMSG2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMSG
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Wednesbury Parkway (Midland Metro Stop)
+  HubNaptanCode: nwmwpgja
+  Id: 9400ZZWMWP2
+  Indicator: Platform 2
+  Lat: 52.54966354370117
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wednesbury
+  Lon: -2.0320420265197754
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWP2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWP
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Edgbaston Village (Midland Metro Stop)
+  HubNaptanCode: nwmtgpgm
+  Id: 9400ZZWMEDG2
+  Indicator: Platform 2
+  Lat: 52.47197723388672
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.923501968383789
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMEDG2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMEDG
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Loxdale (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwa
+  Id: 9400ZZWMLO1
+  Indicator: Platform 1
+  Lat: 52.56011199951172
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bradley
+  Lon: -2.065829038619995
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMLO1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMLO
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Brindleyplace (Midland Metro Stop)
+  HubNaptanCode: nwmpwpjt
+  Id: 9400ZZWMBPL1
+  Indicator: Platform 1
+  Lat: 52.47682571411133
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9123049974441528
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBPL1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBPL
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Bull Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpd
+  Id: 9400ZZWMBUL2
+  Indicator: Platform 2
+  Lat: 52.48189163208008
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.8962889909744263
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBUL2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBUL
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: The Hawthorns (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtd
+  Id: 9400ZZWMHA3
+  Indicator: Platform 3
+  Lat: 52.505828857421875
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Smethwick
+  Lon: -1.9651069641113281
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMHA3
+  PlaceType: PLT
+  StationNaptan: 940GZZWMHA
+  StopLetter: Platform 3
+  StopType: NaptanMetroPlatform
+- CommonName: Lodge Road-West Bromwich Town Hall (Metro Stop)
+  HubNaptanCode: nwmwpgjw
+  Id: 9400ZZWMLR1
+  Indicator: Platform 1
+  Lat: 52.51872253417969
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lamberts End
+  Lon: -1.9998470544815063
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMLR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMLR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: The Crescent (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpm
+  Id: 9400ZZWMCR1
+  Indicator: Platform 1
+  Lat: 52.568016052246094
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Bilston
+  Lon: -2.080815076828003
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Jewellery Quarter (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtj
+  Id: 9400ZZWMJQ3
+  Indicator: Platform 3
+  Lat: 52.489986419677734
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Jewellery Quarter
+  Lon: -1.9142229557037354
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMJQ3
+  PlaceType: PLT
+  StationNaptan: 940GZZWMJQ
+  StopLetter: Platform 3
+  StopType: NaptanMetroPlatform
+- CommonName: Five Ways (Midland Metro Stop)
+  HubNaptanCode: nwmtapwg
+  Id: 9400ZZWMFW1
+  Indicator: Platform 1
+  Lat: 52.47477722167969
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9152380228042603
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMFW1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMFW
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Bradley Lane (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmt
+  Id: 9400ZZWMBR1
+  Indicator: Platform 1
+  Lat: 52.55609130859375
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lower Bradley
+  Lon: -2.057873010635376
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Winson Green Outer Circle (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdt
+  Id: 9400ZZWMWI2
+  Indicator: Platform 2
+  Lat: 52.498966217041016
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Winson Green
+  Lon: -1.9392169713974
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWI2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWI
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Centenary Square (Midlands Metro Stop)
+  HubNaptanCode: nwmwtpmw
+  Id: 9400ZZWMCSQ2
+  Indicator: Platform 2
+  Lat: 52.478736877441406
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9084140062332153
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCSQ2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCSQ
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Black Lake (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmd
+  Id: 9400ZZWMBL1
+  Indicator: Platform 1
+  Lat: 52.5309944152832
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Black Lake
+  Lon: -2.011080026626587
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBL1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBL
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Jewellery Quarter (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtm
+  Id: 9400ZZWMJQ4
+  Indicator: Platform 4
+  Lat: 52.48988723754883
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Jewellery Quarter
+  Lon: -1.9143110513687134
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMJQ4
+  PlaceType: PLT
+  StationNaptan: 940GZZWMJQ
+  StopLetter: Platform 4
+  StopType: NaptanMetroPlatform
+- CommonName: The Hawthorns (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtg
+  Id: 9400ZZWMHA4
+  Indicator: Platform 4
+  Lat: 52.5058708190918
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Smethwick
+  Lon: -1.964959979057312
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMHA4
+  PlaceType: PLT
+  StationNaptan: 940GZZWMHA
+  StopLetter: Platform 4
+  StopType: NaptanMetroPlatform
+- CommonName: St Chads (Midland Metro Stop)
+  HubNaptanCode: nwmwpgjm
+  Id: 9400ZZWMBS4
+  Indicator: platfrom 1
+  Lat: 52.48484420776367
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9004199504852295
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBS4
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBS
+  StopLetter: platfrom 1
+  StopType: NaptanMetroPlatform
+- CommonName: Edgbaston Village (Midland Metro Stop)
+  HubNaptanCode: nwmtgmpd
+  Id: 9400ZZWMEDG1
+  Indicator: Platform 1
+  Lat: 52.472042083740234
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9235459566116333
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMEDG1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMEDG
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Corporation Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpj
+  Id: 9400ZZWMCOR2
+  Indicator: Platform 2
+  Lat: 52.479976654052734
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.8970450162887573
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCOR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCOR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Handsworth Booth Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmj
+  Id: 9400ZZWMBO1
+  Indicator: Platform 1
+  Lat: 52.50214767456055
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Handsworth
+  Lon: -1.9521909952163696
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBO1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBO
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Soho Benson Road (Midland Metro Stop)
+  HubNaptanCode: nwmwpgap
+  Id: 9400ZZWMSH2
+  Indicator: Platform 2
+  Lat: 52.49699401855469
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Winson Green
+  Lon: -1.931030035018921
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMSH2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMSH
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Bull Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpa
+  Id: 9400ZZWMBUL1
+  Indicator: Platform 1
+  Lat: 52.48191833496094
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.8962739706039429
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBUL1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBUL
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Bradley Lane (Midland Metro Stop)
+  HubNaptanCode: nwmwpdmw
+  Id: 9400ZZWMBR2
+  Indicator: Platform 2
+  Lat: 52.55603790283203
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Lower Bradley
+  Lon: -2.057827949523926
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: West Bromwich Central (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdj
+  Id: 9400ZZWMWB1
+  Indicator: Platform 1
+  Lat: 52.51655578613281
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9945859909057617
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWB1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWB
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Grand Central New Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwg
+  Id: 9400ZZWMNWS1
+  Indicator: Platform 1
+  Lat: 52.47861099243164
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.899124026298523
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMNWS1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMNWS
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Wednesbury Great Western Street (Metro Stop)
+  HubNaptanCode: nwmwpgmg
+  Id: 9400ZZWMWW2
+  Indicator: Platform 2
+  Lat: 52.54893493652344
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wednesbury
+  Lon: -2.0257151126861572
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWW2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWW
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Wednesbury Great Western Street (Metro Stop)
+  HubNaptanCode: nwmwpgmd
+  Id: 9400ZZWMWW1
+  Indicator: Platform 1
+  Lat: 52.548980712890625
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wednesbury
+  Lon: -2.025567054748535
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWW1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWW
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Corporation Street (Midland Metro Stop)
+  HubNaptanCode: nwmwpdpg
+  Id: 9400ZZWMCOR1
+  Indicator: Platform 1
+  Lat: 52.47969055175781
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.8971190452575684
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMCOR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMCOR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: The Royal (Midland Metro Stop)
+  HubNaptanCode: nwmwpdwt
+  Id: 9400ZZWMRO1
+  Indicator: Platform 1
+  Lat: 52.58110809326172
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wolverhampton
+  Lon: -2.116921901702881
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMRO1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMRO
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: Wolverhampton Station (Midland Metro Stop)
+  HubNaptanCode: nwmwjawd
+  Id: 9400ZZWMWR1
+  Indicator: Platform 1
+  Lat: 52.58724594116211
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Wolverhampton
+  Lon: -2.1195499897003174
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMWR1
+  PlaceType: PLT
+  StationNaptan: 940GZZWMWR
+  StopLetter: Platform 1
+  StopType: NaptanMetroPlatform
+- CommonName: St Chads (Midland Metro Stop)
+  HubNaptanCode: nwmwpgjp
+  Id: 9400ZZWMBS5
+  Indicator: platform 2
+  Lat: 52.48479080200195
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: Birmingham
+  Lon: -1.9005379676818848
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMBS5
+  PlaceType: PLT
+  StationNaptan: 940GZZWMBS
+  StopLetter: platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Kenrick Park (Midland Metro Stop)
+  HubNaptanCode: nwmwpdtw
+  Id: 9400ZZWMKE2
+  Indicator: Platform 2
+  Lat: 52.508697509765625
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9825639724731445
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMKE2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMKE
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
+- CommonName: Trinity Way (Midland Metro Stop)
+  HubNaptanCode: nwmwpgdg
+  Id: 9400ZZWMTR2
+  Indicator: Platform 2
+  Lat: 52.51190948486328
+  Lines:
+    Identifier:
+    - Id: '220'
+      Name: mm1
+      Operators:
+        Operator:
+        - Code: TMM
+          Id: '7'
+          Name: West Midlands Metro
+      Type: Line
+      Uri: /Line/220/Route
+  Locality: West Bromwich
+  Lon: -1.9882949590682983
+  Modes:
+    Mode: TRAM_OR_METRO
+  NaptanId: 9400ZZWMTR2
+  PlaceType: PLT
+  StationNaptan: 940GZZWMTR
+  StopLetter: Platform 2
+  StopType: NaptanMetroPlatform
