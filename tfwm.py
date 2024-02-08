@@ -41,8 +41,8 @@ PARAMS = {
 # with open('metro_stops.yaml', 'w') as f:
 #     yaml.dump(metro_stops, f)
 
-with open('metro_stops.yaml', 'r') as f:
-    metro_stops = yaml.load(f, Loader=yaml.FullLoader)
+# with open('metro_stops.yaml', 'r') as f:
+#     metro_stops = yaml.load(f, Loader=yaml.FullLoader)
 
 def getArrivals():
     URL = f"http://api.tfwm.org.uk/Line/{MM_LINE_ID}/Arrivals?"
