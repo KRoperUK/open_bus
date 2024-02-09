@@ -1,6 +1,10 @@
 <div id="map"></div>
 
 <script>
+    if (document.getElementById["commit-sha"].innerText != "COMMIT_SHA") {
+        document.getElementById["commit-sha"].href = document.getElementById["commit-sha"].href + document.getElementById["commit-sha"].innerText
+    }
+
     var coordinates = {{ site.data.bus_objects | jsonify }};
     var metro_stops = {{ site.data.metro_stops | jsonify }};
     var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
