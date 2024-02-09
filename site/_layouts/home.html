@@ -22,6 +22,9 @@
             height: 95vh;
             width: 100vw;
         }
+        #last-updated {
+            padding-left: 1em;
+        }
         .bus-icon {
             border: 2px solid black;
             border-radius: 50%;
@@ -143,6 +146,6 @@
         {% include map.html %}
         <!-- END: /Users/kieran/Documents/tfwm-api-tests/site/_layouts/map.html -->
     </div>
-    <p>Last updated: {{ site.time | date: "%H:%M:%S - %d %B %Y" }} COMMIT_SHA</p>
+    <p id="last-updated">Last updated: {{ site.time | date: "%H:%M:%S - %d %B %Y" }} COMMIT_SHA</p>
 </body>
 </html>
