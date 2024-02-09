@@ -200,8 +200,8 @@
 
     map.on('moveend', function(e) {
         const lat_lon_obj = map.getCenter();
-        const url = `https://bus.kroper.uk/?lat=${lat_lon_obj['lat']}&lon=${lat_lon_obj['lng']}`
-        document.getElementById('url-a').href = url
+        const url = `bus.kroper.uk/?lat=${lat_lon_obj['lat']}&lon=${lat_lon_obj['lng']}`
+        document.getElementById('url-a').href = 'https://' + url
         document.getElementById('url-a').innerText = url
 
     });
