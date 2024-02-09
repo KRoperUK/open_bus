@@ -147,7 +147,7 @@
             // Create a custom div icon with the service number
             var customIcon = L.divIcon({
                 className: 'custom-icon',
-                html: `<div class="bus-icon" style="background-color: ${coordinates[key][i]['directionRef'] === 'INBOUND' ? '#2ecc71' : '#f1c40f'}; ${coordinates[key][i]['directionRef'] === 'OUTBOUND' ? 'border-style: dotted;' : '' } ${TIME_DIFF < 1*60*1000 ? 'text-decoration: underline;' : ''} ${TIME_DIFF > 3*60*1000 ? 'opacity: 0.3;' : ''} ${TIME_DIFF > 5*60*1000 ? 'opacity: 0.1;' : ''} ${TIME_DIFF > 10*60*1000 ? 'opacity: 0.05;' : ''}">
+                html: `<div class="bus-icon ${TIME_DIFF < 1 * 60 * 1000 ? 'bus-immediate' : ''}" style="background-color: ${coordinates[key][i]['directionRef'] === 'INBOUND' ? '#2ecc71' : '#f1c40f'}; ${coordinates[key][i]['directionRef'] === 'OUTBOUND' ? 'border-style: dotted;' : '' } ${TIME_DIFF < 1*60*1000 ? 'text-decoration: underline;' : ''} ${TIME_DIFF > 3*60*1000 ? 'opacity: 0.3;' : ''} ${TIME_DIFF > 5*60*1000 ? 'opacity: 0.1;' : ''} ${TIME_DIFF > 10*60*1000 ? 'opacity: 0.05;' : ''}">
                         <b>
                             ${coordinates[key][i]['publishedLineName']}
                         </b>

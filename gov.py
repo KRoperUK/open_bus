@@ -156,6 +156,11 @@ activities = []
 # refactorXML('data.xml')
 # activities += getActivities('data.xml')
 
+# Stagecoach
+# loadRSS(7035)
+# refactorXML('data.xml')
+# activities += getActivities('data.xml')
+
 # # NXWM
 loadRSS(10609)
 refactorXML('data.xml')
