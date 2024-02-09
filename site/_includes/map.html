@@ -9,18 +9,6 @@
     zoom = 14;
     url_set_lat_lon = false;
 
-    const SEARCH_PARAMS = new URLSearchParams(window.location.search);
-    
-    
-    if (SEARCH_PARAMS.has('lat') && SEARCH_PARAMS.has('lon')) {
-        lat_lon = [SEARCH_PARAMS.get('lat'), SEARCH_PARAMS.get('lon')];
-        url_set_lat_lon = true;
-    }
-
-    if (SEARCH_PARAMS.has('zoom')) {
-        zoom = SEARCH_PARAMS.get('zoom');
-    }
-
     const LS = JSON.parse(localStorage.getItem('mapState'));
 
     if (LS != null){
@@ -32,6 +20,17 @@
         if ('zoom' in LS) {
             zoom = LS.zoom;
         }
+    }
+
+    const SEARCH_PARAMS = new URLSearchParams(window.location.search);
+    
+    if (SEARCH_PARAMS.has('lat') && SEARCH_PARAMS.has('lon')) {
+        lat_lon = [SEARCH_PARAMS.get('lat'), SEARCH_PARAMS.get('lon')];
+        url_set_lat_lon = true;
+    }
+
+    if (SEARCH_PARAMS.has('zoom')) {
+        zoom = SEARCH_PARAMS.get('zoom');
     }
     
     var map = L.map('map').setView(lat_lon, zoom);
@@ -194,9 +193,17 @@
     
     services.sort();
     
-    map.on('moveend', function(e) {
+    window.addEventListener("beforeunload", function(e) {
         var lat_lon_obj = map.getCenter();
         localStorage.setItem('mapState', JSON.stringify({ lat: lat_lon_obj['lat'], lon: lat_lon_obj['lng'], zoom: map.getZoom() }));
+    });
+
+    map.on('moveend', function(e) {
+        const lat_lon_obj = map.getCenter();
+        const url = `https://bus.kroper.uk/?lat=${lat_lon_obj['lat']}&lon=${lat_lon_obj['lng']}`
+        document.getElementById('url-a').href = url
+        document.getElementById('url-a').innerText = url
+
     });
 
     L.control.tagFilterButton({
