@@ -6,6 +6,7 @@
     var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
 
     lat_lon = [52.45033122641582, -1.930996616069787];
+    zoom = 14;
     url_set_lat_lon = false;
 
     const SEARCH_PARAMS = new URLSearchParams(window.location.search);
@@ -15,11 +16,29 @@
         lat_lon = [SEARCH_PARAMS.get('lat'), SEARCH_PARAMS.get('lon')];
         url_set_lat_lon = true;
     }
+
+    if (SEARCH_PARAMS.has('zoom')) {
+        zoom = SEARCH_PARAMS.get('zoom');
+    }
+
+    const LS = JSON.parse(localStorage.getItem('mapState'));
+
+    if (LS != null){
+        if ('lat' in LS && 'lon' in LS) {
+            lat_lon = [LS.lat, LS.lon];
+            url_set_lat_lon = true;
+        }
+
+        if ('zoom' in LS) {
+            zoom = LS.zoom;
+        }
+    }
     
-    var map = L.map('map').setView(lat_lon, 14);
+    var map = L.map('map').setView(lat_lon, zoom);
+    L.control.locate().addTo(map);
 
     if (!url_set_lat_lon) {
-        map.locate({setView: true, maxZoom: 14});
+        map.locate({setView: true, maxZoom: zoom+1});
     }
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
@@ -174,6 +193,11 @@
     
     services.sort();
     
+    map.on('moveend', function(e) {
+        var lat_lon_obj = map.getCenter();
+        localStorage.setItem('mapState', JSON.stringify({ lat: lat_lon_obj['lat'], lon: lat_lon_obj['lng'], zoom: map.getZoom() }));
+    });
+
     L.control.tagFilterButton({
         data: services,
         icon: '<i class="fa fa-bus"></i>',
