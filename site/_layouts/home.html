@@ -146,3 +146,10 @@
     <p id="last-updated">Last updated: {{ site.time | date: "%H:%M:%S - %d %B %Y" }} - <span id="url"><a href="https://bus.kroper.uk/" id="url-a">bus.kroper.uk</a></span> - <a id="commit-sha" href="https://github.com/KRoperUK/open_bus/commit/">COMMIT_SHA</a></p>
 </body>
 </html>
+
+
+<script>
+    if (document.getElementById("commit-sha").innerText != "COMMIT_SHA") {
+        document.getElementById("commit-sha").href = document.getElementById("commit-sha").href + document.getElementById("commit-sha").innerText
+    }
+</script>
