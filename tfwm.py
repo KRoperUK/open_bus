@@ -11,7 +11,7 @@ from copy import deepcopy
 
 load_dotenv()
 
-MM_LINE_ID = "220"
+MM_LINE_ID = "7"
 
 PARAMS = {
     'app_key': os.getenv('app_key'),
