@@ -1,17 +1,11 @@
 import requests
-import urllib.parse
 import os
-import xml.etree.ElementTree as ET 
 from dotenv import load_dotenv
-import xml.dom.minidom
-from siri import parse
 import yaml
-import json
-from copy import deepcopy
 
 load_dotenv()
 
-MM_LINE_ID = "7"
+MM_LINE_ID = "4056"
 
 PARAMS = {
     'app_key': os.getenv('app_key'),
@@ -50,6 +44,7 @@ def getArrivals():
     return resp.json()
 
 raw_metro_arrivals = getArrivals()
+print(raw_metro_arrivals)
 
 metro_arrivals = []
 
