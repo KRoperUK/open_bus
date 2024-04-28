@@ -31,9 +31,14 @@
         loadJSON('https://bus.kroper.uk/data.json', drawBusses);
     }, 15000);
 
+    loadJSON('https://bus.kroper.uk/metro_data.json', drawMetroStops);
+    setInterval(function() {
+        loadJSON('https://bus.kroper.uk/metro_data.json', drawMetroStops);
+    }, 15000);
+
 
     var metro_stops = {{ site.data.metro_stops | jsonify }};
-    var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
+    // var metro_arrivals = {{ site.data.metro_arrivals | jsonify }};
 
     lat_lon = [52.45033122641582, -1.930996616069787];
     zoom = 14;
@@ -89,91 +94,98 @@
 
     var date_now = new Date();
     
-
+    var metroStops = L.layerGroup()
+    var services = [];
+    function drawMetroStops(metro_arrivals) {
+        date_now = new Date();
     // Add markers for each item in coordinates
-    var services = []; // Initialize an array to store string values for all operators
-    for (var key in metro_stops) {
-        const PLATFORM_NUM = metro_stops[key]["StopLetter"].slice(-1);
-        var arrivals = [];
-        var arrivals_shim = [];
+       // Initialize an array to store string values for all operators
+        metroStops.clearLayers();
+        for (var key in metro_stops) {
+            const PLATFORM_NUM = metro_stops[key]["StopLetter"].slice(-1);
+            var arrivals = [];
+            var arrivals_shim = [];
 
-        for (var i = 0; i < metro_arrivals.length; i++) {
-            if (metro_arrivals[i]['NaptanId'] === metro_stops[key]['Id']) {
-                arrival_time = new Date(metro_arrivals[i]['ExpectedArrival']);
-                mins_remaining = Math.floor((arrival_time - date_now) / 1000 / 60);
-                arrivals_shim.push(
-                    {
-                        'DestinationName': `<b>${metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', '')}</b>`,
-                        'MinsRemaining': mins_remaining
-                    }
-                );
+            for (var i = 0; i < metro_arrivals.length; i++) {
+                if (metro_arrivals[i]['NaptanId'] === metro_stops[key]['Id']) {
+                    arrival_time = new Date(metro_arrivals[i]['ExpectedArrival']);
+                    mins_remaining = Math.floor((arrival_time - date_now) / 1000 / 60);
+                    arrivals_shim.push(
+                        {
+                            'DestinationName': `<b>${metro_arrivals[i]['DestinationName'].replaceAll(' (Midland Metro Stop)', '')}</b>`,
+                            'MinsRemaining': mins_remaining
+                        }
+                    );
+                }
             }
-        }
 
-        arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
+            arrivals_shim.sort((a, b) => (a.MinsRemaining > b.MinsRemaining) ? 1 : -1);
 
-        try {
-            var NEXT_ARRIVAL = arrivals_shim[0]['MinsRemaining'];
-        }
-        catch (e) {
-            var NEXT_ARRIVAL = '-';
-        }
-        for (var i = 0; i < arrivals_shim.length; i++) {
-            if (arrivals_shim[i]['MinsRemaining'] > 10) {
-                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="far">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            try {
+                var NEXT_ARRIVAL = arrivals_shim[0]['MinsRemaining'];
             }
-            else if (arrivals_shim[i]['MinsRemaining'] > 5) {
-                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="normal">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            catch (e) {
+                var NEXT_ARRIVAL = '-';
             }
-            else if (arrivals_shim[i]['MinsRemaining'] > 0) {
-                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="close">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+            for (var i = 0; i < arrivals_shim.length; i++) {
+                if (arrivals_shim[i]['MinsRemaining'] > 10) {
+                    arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="far">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+                }
+                else if (arrivals_shim[i]['MinsRemaining'] > 5) {
+                    arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="normal">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+                }
+                else if (arrivals_shim[i]['MinsRemaining'] > 0) {
+                    arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="close">${arrivals_shim[i]['MinsRemaining']}</span> mins</li>`);
+                }
+                else if (arrivals_shim[i]['MinsRemaining'] >= -1) {
+                    arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="due">Due</span></li>`);
+                } 
+                else if (arrivals_shim[i]['MinsRemaining'] < -1) {
+                    arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="departed">Departed</span></li>`);
+                }
+                
+                else {
+                    continue;
+                }
             }
-            else if (arrivals_shim[i]['MinsRemaining'] >= -1) {
-                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="due">Due</span></li>`);
-            } 
-            else if (arrivals_shim[i]['MinsRemaining'] < -1) {
-                arrivals.push(`<li>${arrivals_shim[i]['DestinationName']} - <span class="departed">Departed</span></li>`);
-            }
-            
-            else {
-                continue;
-            }
-        }
 
-        arrivals = arrivals.slice(0, 4);
+            arrivals = arrivals.slice(0, 4);
 
-        const ARRIVALS_STRING = arrivals.join('');
+            const ARRIVALS_STRING = arrivals.join('');
 
-        const POPUP_STRING = `
-            <div class="metro-stop-popup">
-                <b>${metro_stops[key]['CommonName']}</b>
-                <br>
-                <b>Stop letter:</b> ${metro_stops[key]['StopLetter']}
-                <br>
-                <ul class="metro-stop-popup-ul">
-                    ${ARRIVALS_STRING}
-                </ul>
-            </div>
-        `;
+            const POPUP_STRING = `
+                <div class="metro-stop-popup">
+                    <b>${metro_stops[key]['CommonName']}</b>
+                    <br>
+                    <b>Stop letter:</b> ${metro_stops[key]['StopLetter']}
+                    <br>
+                    <ul class="metro-stop-popup-ul">
+                        ${ARRIVALS_STRING}
+                    </ul>
+                </div>
+            `;
 
-        var marker = L.marker(
-            [metro_stops[key]['Lat'], metro_stops[key]['Lon']],
-            {
-                icon: L.divIcon({
-                    className: `metro-stop ${PLATFORM_NUM % 2 == 1 ? 'ms-left' : 'ms-right' }`,
-                    html: `<div><div class='metro-stop-inner'><span>${NEXT_ARRIVAL}</span></div></div>`
+            var marker = L.marker(
+                [metro_stops[key]['Lat'], metro_stops[key]['Lon']],
+                {
+                    icon: L.divIcon({
+                        className: `metro-stop ${PLATFORM_NUM % 2 == 1 ? 'ms-left' : 'ms-right' }`,
+                        html: `<div><div class='metro-stop-inner'><span>${NEXT_ARRIVAL}</span></div></div>`
+                    })
                 })
-            })
-            .bindPopup(POPUP_STRING)
-            .on('click', function(e) {
-                e.target.openPopup();
-            })
-            .addTo(map);
+                .bindPopup(POPUP_STRING)
+                .on('click', function(e) {
+                    e.target.openPopup();
+                })
+                .addTo(metroStops);
+        }
+        metroStops.addTo(map);
     }
 
     var busses = L.layerGroup()
 
     function drawBusses(coordinates) {
+        date_now = new Date();
         console.log(coordinates);
         busses.clearLayers();
         for (var key in coordinates) {
@@ -228,9 +240,8 @@
         console.log("Last updated: " + new Date().toLocaleTimeString());
         document.getElementById('last-updated-date').innerText = new Date().toLocaleTimeString();
         busses.addTo(map);
+        services.sort();
     }
-    
-    services.sort();
     
     window.addEventListener("beforeunload", function(e) {
         var lat_lon_obj = map.getCenter();
